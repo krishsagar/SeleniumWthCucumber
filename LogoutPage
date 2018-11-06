@@ -1,0 +1,40 @@
+package pagesRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import junit.framework.Assert;
+
+public class Logout {
+	
+	
+	@FindBy(xpath="//a[text()='Logout']")
+	  WebElement LogoutLink;
+	@FindBy(xpath="//span[@class='sectionHeading']")
+	WebElement verifyLogoutLinkText;
+	
+	
+	public Logout(WebDriver driver)
+	{
+		
+		PageFactory.initElements(driver, this);
+	}
+	public  void clickLogoutLink() throws InterruptedException
+	{
+		LogoutLink.click();
+		
+		
+	}
+
+	
+	
+	public  void verifyLogoutPage() throws InterruptedException
+	{
+		String LogoutTextValue=verifyLogoutLinkText.getText();
+		Assert.assertEquals("kkkkkk", LogoutTextValue);
+	}
+
+
+}
