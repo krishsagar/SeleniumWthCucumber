@@ -1,0 +1,35 @@
+package pagesRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import junit.framework.Assert;
+
+public class HomePage {
+	
+	@FindBy(xpath="//a[text()='Home']")
+	  WebElement homeLnk;
+	@FindBy(xpath="//td[contains(text(),'kkkkkk')]")
+	WebElement verifyHomeText;
+	
+	
+	public HomePage(WebDriver driver)
+	{
+		
+		PageFactory.initElements(driver, this);
+	}
+	public  void clickOnHomeLink() throws InterruptedException
+	{
+		homeLnk.click();
+	}
+
+	
+	
+	public  void verifyHomePage() throws InterruptedException
+	{
+		String homeTextValue=verifyHomeText.getText();
+		Assert.assertEquals("kkkkkk", homeTextValue);
+	}
+}
