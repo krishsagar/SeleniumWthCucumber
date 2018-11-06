@@ -1,0 +1,33 @@
+***name of the file is krrish.features*********** 
+
+Feature: Test krishnaSagar smoke scenario 
+
+
+
+
+@krishna 
+Scenario: Test the all the menu liks of the home page 
+	Given user login successfully to the application 
+	When user should be to click home page 
+	Then verify the home page 
+	When user should be to click Content Search 
+	Then verify the Content Search page 
+	When user should be to click Process 
+	Then verify the Process page 
+	When user should be to click Preferences 
+	Then verify the Preferences page 
+	When user should be to click Add Document 
+	Then verify the Add Document page 
+	When user should be to click Create Work 
+	Then verify the Create Work page 
+	When user should be to click Help 
+	When user should be to click Logout 
+	Then verify the Logout page   
+	
+	  
+	  
+	
+	
+	
+	
+	
